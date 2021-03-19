@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./estilos.css">
+        <title>Posts</title>
+    </head>
+    <body>
+        <header>
+            <h1>Post view</h1>
+        </header>   
+        <main>
+            <div id='write-post' >
+                <h2>Create a new post</h2>
+                <input type="text" id='user' value='Web paso a paso' readonly />
+                <input type="text" id='title' placeholder="Ingresa el titulo de la publicación" />
+                <input type="text" id='content' placeholder="Ingresa el titulo de la publicación" />
+                <button onclick="getPostInfo()" >Post</button>
+            </div>
+            <div id='post-area' ></div>
+        </main>
+        <script src="./javascript.js" >
+        </script>
+    </body>
+</html>
