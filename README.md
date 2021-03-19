@@ -10,7 +10,5 @@ Facebook :
 - https://www.facebook.com/Web-paso-a-paso-105191964720144
 
 ## Contenido:
-<b>
   - Codigo de fondo del video introductorio
   - Variables
-</b>
