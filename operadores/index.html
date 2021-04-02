@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <table>
+        <caption>Operadores aritméticos</caption>
+        <thead>
+            <tr>
+                <th>OPERADOR</th>
+                <th>FUNCION</th>
+                <th>EJEMPLO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>=</td>
+                <td>
+                    Asignación : <br>
+                    Permite dar un valor a una variable o constante
+                </td>
+                <td>
+                    var variable = "Valor";<br>
+                    let local = true;<br>
+                    const constante = 10;
+                </td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>
+                    Suma / Concatenación : <br>
+                    Permite sumar dos valores numéricos o concatenar (unir) 
+                    dos cadenas de texto (o una cadena con un valor)
+                </td>
+                <td>
+                    var suma = 5 + 10; // 15  <br><br>
+                    var cadena = "Unión de "+3+" valores"; <br>// "Unión de 3 valores"
+                </td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>
+                    Resta : <br>
+                    Permite restar dos valores numéricos
+                </td>
+                <td>
+                    var resta = 20 - 3; // 17
+                </td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>
+                    Multiplicación : <br>
+                    Realiza multiplicaciones entre valores numéricos
+                </td>
+                <td>
+                    var multiplicacion = 8 * 7; // 56
+                </td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>
+                    División : <br>
+                    Realiza una división y regresa el resultado de la misma
+                </td>
+                <td>
+                    var division = 20 / 4; //5
+                    var division = 14 / 3; //3
+                </td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>
+                    Módulo : <br>
+                    Realiza una división, pero, regresa el sobrante de la misma, 
+                    es útil para saber si un número es divisible entre otro
+                </td>
+                <td>
+                    var modulo = 20 % 4; //0<br>
+                    var modulo = 14 % 3; //2<br>
+                    /*En este caso 14/3 = 3 y tiene un sobrante de 2*/
+                </td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>
+                    Potencia : <br>
+                    Permite elevar un valor a una potencia dada, donde el valor a 
+                    la derecha se eleva a la potencia en la izquierda
+                </td>
+                <td>
+                    var potencia = 3 ** 2; // 9
+                </td>
+            </tr>
+            <tr>
+                <td>++</td>
+                <td>
+                    Incremento : <br>
+                    Realiza un incremento paulatino de una unidad a el valor que corresponda
+                </td>
+                <td>
+                    var a = 5; <br>
+                    console.log(a++); // 6
+                </td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>
+                    Decremento : <br>
+                    Disminuye en una unidad el valor al cual sea asignado
+                </td>
+                <td>
+                    var c = 0; <br>
+                    console.log(c--); // -1
+                </td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>
+                    Suma y asignación : <br>
+                    Retorna la suma de los valores que conforman la operación y la asigna a 
+                    la variable correspontiente
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 3;<br>
+                    b+=a;<br>
+                    consolo.log(b); // 8
+                </td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>
+                    Resta y asignación : <br>
+                    Realiza la diferencia entre los dos valores y lo asgina a la variable que 
+                    esta indicada
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 3;<br>
+                    b-=a;<br>
+                    consolo.log(b); // -2
+                </td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>
+                    Multiplicación y asignación : <br>
+                    Realiza el producto y lo asigna a la variable
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 3;<br>
+                    b*=a;<br>
+                    consolo.log(b); // 15
+                </td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>
+                    División y asignación : <br>
+                    Realiza la división y asigna el cociente a la variable
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 3;<br>
+                    b/=a;<br>
+                    consolo.log(b); // 0.6
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <caption>Operadores relacionales</caption>
+        <thead>
+            <tr>
+                <th>OPERADOR</th>
+                <th>FUNCION</th>
+                <th>EJEMPLO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>></td>
+                <td>
+                    Mayor que : <br>
+                    Permite validar si un valor a es mayor que un valor b
+                </td>
+                <td>
+                    var a = 5; <br>
+                    var b = 3; <br>
+                    console.log( a > b ); //true <br>
+                    console.log( a > 5 ); //false
+                </td>
+            </tr>
+            <tr>
+                <td><</td>
+                <td>
+                    Menor que : <br>
+                    Permite validar si un valor a es menor que un valor b
+                </td>
+                <td>
+                    var a = 5; <br>
+                    var b = 3; <br>
+                    console.log( b < a ); //true <br>
+                    console.log( b < 3 ); //false
+                </td>
+            </tr>
+            <tr>
+                <td>>=</td>
+                <td>
+                    Mayor o igual a : <br>
+                    Permite validar si un valor a es mayor o igual que un valor b
+                </td>
+                <td>
+                    var a = 5; <br>
+                    var b = 3; <br>
+                    console.log( a >= b ); //true <br>
+                    console.log( a >= 5 ); //true
+                </td>
+            </tr>
+            <tr>
+                <td><=</td>
+                <td>
+                    Menor o igual a : <br>
+                    Permite validar si un valor a es menor o igual que un valor b
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 3;<br>
+                    console.log( b <= a ); //true <br>
+                    console.log( b <= 3 ); //true 
+                </td>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>
+                    Igual a : <br>
+                    Permite validar si dos valores (a, b) son iguales, dejando de lado el tipo de dato,
+                    por lo que un valor numerico y una cadena son tratados como iguales
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 3;<br>
+                    console.log( b == a ); //false <br>
+                    console.log( a == 5 ); //true <br>
+                    console.log( a == "5" ); //true  
+                </td>
+            </tr>
+            <tr>
+                <td>===</td>
+                <td>
+                    Identico que a : (Igualdad estricta)<br>
+                    Permite validar si dos valores son iguales en valor y <b>tipo de dato</b>, haciendo
+                    clara distinción entre una cadena y un valor numérica 
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 3;<br>
+                    console.log( b === a ); //false <br>
+                    console.log( a === 5 ); //true <br>
+                    console.log( a === "5" ); //false 
+                </td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>
+                    Diferente de : <br>
+                    Permite validar si dos valores (a, b), son diferentes en valor, pero sin distinción 
+                    de tipo
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 3;<br>
+                    console.log( b != a ); //true <br>
+                    console.log( a != 5 ); //false <br>
+                    console.log( a != "5" ); //false  
+                </td>
+            </tr>
+            <tr>
+                <td>!==</td>
+                <td>
+                    Distinto a : (Deferencia estricta )<br>
+                    Permite validar si dos valores (a, b), son diferentes en valor, pero haciendo distinción 
+                    de <b>tipo de dato</b>
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 3;<br>
+                    console.log( b !== a ); //true <br>
+                    console.log( a !== 5 ); //false <br>
+                    console.log( a !== "5" ); //true  
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <caption>Operadores lógicos</caption>
+        <thead>
+            <tr>
+                <th>OPERADOR</th>
+                <th>FUNCION</th>
+                <th>EJEMPLO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&&</td>
+                <td>
+                    And (Y) : <br>
+                    Relaciona dos condiciones, haciendo obligatorio que ambas se cumplan para 
+                    que se considere verdadero, si una falla, se considera falso
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 10;<br>
+                    var c = 12;<br>
+                    console.log( a < b && a < c ); //true <br>
+                    console.log( a < b && b < c ); //true <br>
+                    console.log( a < b && a > c ); //false
+                </td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>
+                    OR (O) : <br>
+                    Relaciona dos condicionales, tales que cumpliendose almenos una de ellas, 
+                    la condición se valida como verdadera, si ambas fallan se considera falso
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 10;<br>
+                    var c = 12;<br>
+                    console.log( a < b || a < c ); //true <br>
+                    console.log( a < b || b < c ); //true <br>
+                    console.log( a < b || a > c ); //true
+                </td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>
+                    Not (Negación) : <br>
+                    Cambia el valor de una condición de verdadero a falso o falso a verdadero
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 10;<br>
+                    var c = 12;<br>
+                    console.log( ! a < b ); //false <br>
+                    console.log( ! b < c ); //false <br>
+                    console.log( ! c < a ); //true
+                </td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>
+                    Operador ternario :<br>
+                    Permite realizar condiciones en una sola línea, formado de 3 partes obligatorias
+                    <b>condicion ? true : false</b>, donde cada valor se va a retornar según el resultado 
+                    de la condición
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 10;<br>
+                    var c = 12;<br>
+                    console.log( a < b ? "A es menor" : "B es menor" ); <br>//"A es menor" <br><br>
+                    console.log( a > c ? "A es mayor" : "C es mayor" ); <br>//"C es mayor" 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    XOR <br>
+                    <b>(No existe)</b>
+                </td>
+                <td>
+                    La condición XOR permite invertir la condición or, es decir en caso de que ambas 
+                    son validas se retorna false, cuando ambas son falsas se devuelve false, pero si 
+                    una es valida y otra falsa se retorna true
+                </td>
+                <td>
+                    var a = 5;<br>
+                    var b = 10;<br>
+                    var c = 5;<br>
+                    console.log( ! ( a < b && a < c ) ); //true<br>
+                    console.log( ! ( a < b && b < c ) ); //true<br>
+                    console.log( ! ( a > b && a > c ) ); //false
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="./index.js" ></script>
+</body>
+</html>

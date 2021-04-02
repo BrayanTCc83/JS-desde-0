@@ -12,3 +12,10 @@ Facebook :
 ## Contenido:
   - Codigo de fondo del video introductorio
   - Variables
+  - Estructuras de control:
+    - Condicionales
+    - Bucles
+  - Operadores :
+    - Aritméticos
+    - Relacionales 
+    - Lógicos
