@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <link rel="stylesheet" href="../operadores/index.css">
+</head>
+<body>
+    <header>
+        <h1>LOS OBJETOS DENTRO DE JAVASCRIPT</h1>
+    </header>
+    <main>
+        <h2>Number</h2>
+        <p>
+            Es un objeto que nos permite manipular valores y validar características de números
+            o variables que contengan números, esta clase posee constantes, metodos de
+            validación y conversión.
+            <h3>Constantes</h3>
+            <dl>
+                <dt>
+                    MAX_VALUE
+                    <dd>
+                        Contiene el límite de valores positivos (<i>R</i>) que es capaz de representar JS
+                    </dd>
+                </dt>
+                <dt>
+                    MIN_VALUE
+                    <dd>
+                        Contiene el límite de valores negativos (<i>R</i>) que es capaz de representar JS
+                    </dd>
+                </dt>
+                <dt>
+                    MAX_SAFE_INTEGER
+                    <dd>
+                        Contiene el límite de valores enteros positivos (<i>N</i>) que es capaz de representar JS
+                    </dd>
+                </dt>
+                <dt>
+                    MIN_SAFE_INTEGER
+                    <dd>
+                        Contiene el límite de valores negativos enteros (<i>Z</i>) que es capaz de representar JS
+                    </dd>
+                </dt>
+                <dt>
+                    EPSILON
+                    <dd>
+                        Usado para obtener el número más pequeño próximo a 0
+                    </dd>
+                </dt>
+                <dt>
+                    POSITIVE_INFINITY
+                    <dd>
+                        Almacena el resultado de obtener un valor tan grande que JS no puede
+                        mostrarlo con sus valores soportados, por ejemplo:
+                        <br>
+                        <i>100**900 ; //Infinity</i>
+                    </dd>
+                </dt>
+                <dt>
+                    NEGATIVE_INFINITY
+                    <dd>
+                        Es el valor que indica un número muy pequeño cuando no es posible
+                        representarlo dentro de los estándares de JS, por ejemplo:
+                        <br>
+                        <i>(-500)**1001 ; //-Infinity</i>
+                    </dd>
+                </dt>
+                <dt>
+                    NaN
+                    <dd>
+                        Notación de no es un número (Not a Number), es el valor que nos 
+                        retorna por defecto cuando intentamos usar valor inválido dentro 
+                        de una operación, por ejemplo multiplicar una cadena de texto por 
+                        un valor:
+                        <br>
+                        <i>"hola"*5 ; //NaN<i>
+                    </dd>
+                </dt>
+            </dl>
+        </p>
+        <h3>Funciones de validación</h3>
+        <ul>
+            <li>isInteger( number )</li>
+            <li>isSafeInteger( number )</li>
+            <li>isFinite( number )</li>
+            <li>isNaN( number )</li>
+        </ul>
+        <h3>Funciones de conversión</h3>
+        <ul>
+            <li>toString()</li>
+            <li>parseInt( number, base )</li>
+            <li>parseFloat( string )</li>
+        </ul>
+    </main>
+    <hr>
+    <h2>String</h2>
+    <p>
+        El objeto string nos pemite manejar cadenas de texto, toda cadena de texto es una extensión
+        del objeto string
+    </p>
+    <h2>Array</h2>
+    <h2>Object</h2>
+    <script src="./number.js" ></script>
+</body>
+</html>

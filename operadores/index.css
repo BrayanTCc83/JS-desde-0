@@ -6,6 +6,9 @@ html,body{
     overflow: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+main, header{
+    padding: 30px;
+}
 :root{
     --main-color : rgb(209, 241, 255);
     --second-color : rgb(21, 125, 223);
