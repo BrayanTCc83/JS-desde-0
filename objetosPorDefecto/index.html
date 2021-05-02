@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="../operadores/index.css">
 </head>
 <body>
-    <header>
+    <header id="header" >
         <h1>LOS OBJETOS DENTRO DE JAVASCRIPT</h1>
+        <a href="#theme-number">Ir a number</a>
+        <a href="#theme-string">Ir a string</a>
+        <a href="#theme-array">Ir a array</a>
+        <a href="#theme-object">Ir a object</a>
     </header>
     <main>
-        <h2>Number</h2>
+        <!--
+        <h2 id="theme-number" >Number</h2>
         <p>
             Es un objeto que nos permite manipular valores y validar características de números
             o variables que contengan números, esta clase posee constantes, metodos de
@@ -75,7 +80,7 @@
                         de una operación, por ejemplo multiplicar una cadena de texto por 
                         un valor:
                         <br>
-                        <i>"hola"*5 ; //NaN<i>
+                        <i>"hola"*5 ; //NaN</i>
                     </dd>
                 </dt>
             </dl>
@@ -93,15 +98,111 @@
             <li>parseInt( number, base )</li>
             <li>parseFloat( string )</li>
         </ul>
+        <hr>
+    -->
+        <h2 id="theme-string" >String</h2>
+        <p>
+            El objeto string nos pemite manejar cadenas de texto, toda cadena de texto es una extensión
+            del objeto string, para ver sus características necesitamos primero crear una cadena de texto,
+            entonces encontraremos métodos y propiedades, principalmente de transformación de la cadena,
+            obtención, remplazamiento, con muchos de ellos que afectan directamente a la vista en la página web.
+            <h3>Propiedades (características de la cadena)</h3>
+            <ul>
+                <li>
+                    <i>Length</i> <br>
+                    Retorna el tamaño de caracteres de una cadena, 0 si es vació
+                </li>
+            </ul>
+            <h3>Modificaciones en la cadena de texto</h3>
+            <ul>
+                <li>
+                    <i>toUpperCase()</i> <br>
+                    Transforma la cadena a mayúsculas al ser aplicada, solo en el lugar en donde fue utilizada, suele ser útil para compara coincidencia de caracteres entre una cadena local y otra ingresada por un usuario.
+                    Existe la variante <b>toLocalUpperCase()</b>, que se usa para escribir caracteres en ciertas regiones.
+                </li>
+                <li>
+                    <i>toLowerCase()</i> <br>
+                    Transforma la cadena a minúsculas al ser aplicada, solo en el lugar en donde fue utilizada.
+                    Existe la variante <b>toLocalLowerCase()</b>, que se usa para escribir caracteres en ciertas regiones.
+                </li>
+                <li>
+                    <i>concat( string )</i> <br>
+                    Devuelve una cadena resultado de la cadena original y la que fue ingresada como parámetro
+                </li>
+                <li>
+                    <i>replace( "toReplace" , "newString" )</i> <br>
+                    <i>replace( regexp , "newString" )</i> <br>
+                    Remplaza los valores indicados en la cadena o expresión regular, con los que se encuentran en la segunda cadena de texto, permitiendo hacer grandes cambios a la cadena
+                </li>
+                <li>
+                    <i>split( "subString" )</i> <br>
+                    <i>split( regexp )</i> <br>
+                    Permite separar una cadena en múltiples trozos, segmentados por los caracteres indicados como parámetro, sea string o regexp, lo retorna como un arreglo
+                </li>
+                <li>
+                    <i>substr( start, length )</i> <br>
+                    Retorna una nueva cadena de texto, extrayendo todos los caracteres partiendo del índice de inicio (start), que puede ser 0 o cualquier número menor a la longitud de la cadena, hasta extenderse la cantidad de caracteres idicada en length
+                </li>
+                <li>
+                    <i>substring( start, end )</i> <br>
+                    Retorna una cadena de texto nueva, entre los indices específicados como parámetros, a diferencia de substr, este recibe ambos valores como posiciones
+                </li>
+                <li>
+                    <i>repeat( count )</i> <br>
+                    Permite repetir una cadena multiples veces, indicadas con un número en el contador
+                </li>
+            </ul>
+            <h3>Extraer información de una cadena</h3>
+            <ul>
+                <li>
+                    <i>charAt( index )</i> <br>
+                    Retorna el caracter de la posición específicada en el índice, partiendo de 0
+                </li>
+                <li>
+                    <i>macth( regexp )</i> <br>
+                    Retorna un arreglo con cada una de las coincidencias encontradas por la expresión regular
+                </li>
+                <li>
+                    <i>search( regexp )</i> <br>
+                    Similar a match, pero devolviendo únicamente la primer coincidencia
+                </li>
+                <li>
+                    <i>charCodeAt( index )</i> <br>
+                    Retorna el valor en unicode correspondiente al caracter de la posición indicada, es usado para los símbolos cuya representación sea definida en UTF-16, estos incluyen números, el alfabeto latino, cirílico, chino, árabe, japonés, entre otros
+                    (Valores menores a 100000 en unicode)
+                </li>
+                <li>
+                    <i>codePointAt( index )</i> <br>
+                    Permite conocer el valor en unicode correspondiente al caracter de la posición indicada, es usado para todo símbolo en unicode, estos pueden pertenecer a cualquier alfabeto, silabario, idioma e incluso soporta valores complejos como emojis
+                </li>
+                <li>
+                    <i>indexOf( "char" )</i> <br>
+                    Devuelve el índice perteneciente a la primera coincidencia con el valor indicado
+                </li>
+                <li>
+                    <i>lastindexOf( "subString" )</i> <br>
+                    <i>lastindexOf( "subString", index )</i> <br>
+                    Retorna verdadero si la cadena original termina con la porción de cadena indicada como parámetro, si no se pasa un index, busca coincidencia con la parte final de la cadena
+                </li>
+                <li>
+                    <i>includes( "subString" )</i><br>
+                    Devuelve verdadero si alguna parte de la cadena contiene una porción que corresponda a la indicada
+                </li>
+                <li>
+                    <i>startsWith( "subString", index )</i><br>
+                    Retorna verdadero siempre y cuando la cadena tenga como primera parte el substring indicado, contando a partir del indice
+                </li>
+                <li>
+                    <i>endsWith( "subString", index )</i><br>
+                    Devuleve verdadero siempre y cuando la cadena tenga como ultima parte el substring indicado, contando en reversa a partir del indice
+                </li>
+            </ul>
+            <p id="prueba" ></p>
+        </p>
+        <hr>
     </main>
-    <hr>
-    <h2>String</h2>
-    <p>
-        El objeto string nos pemite manejar cadenas de texto, toda cadena de texto es una extensión
-        del objeto string
-    </p>
-    <h2>Array</h2>
-    <h2>Object</h2>
-    <script src="./number.js" ></script>
+    <h2 id="theme-array" >Array</h2>
+    <h2 id="theme-object" >Object</h2>
+    <script src="./string.js" ></script>
 </body>
 </html>
