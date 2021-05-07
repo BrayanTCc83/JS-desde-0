@@ -99,7 +99,6 @@
             <li>parseFloat( string )</li>
         </ul>
         <hr>
-    -->
         <h2 id="theme-string" >String</h2>
         <p>
             El objeto string nos pemite manejar cadenas de texto, toda cadena de texto es una extensión
@@ -200,9 +199,223 @@
             <p id="prueba" ></p>
         </p>
         <hr>
+        -->
+        <h2 id="theme-array" >Array</h2>
+        <p>
+            Un array es una estructura de datos que permite almacenar múltiples datos dentro de una misma variable, estos datos pueden ser accedidos mediante sus índices, es decir la posición que tiene el elemento dentro del arreglo
+        </p>
+        <h3>Declaración</h3>
+        <p>
+            <b>var a = new Array(13);</b> //Define el tamaño del arreglo <br>
+            <b>var b = new Array(1,2);</b> //Contiene los elementos del arreglo <br>
+            <b>var c = [1,2];</b> //Definición clásica, con los datos entre corchetes <br>
+            <b>var d = new Array( new Array( length | elems ), new Array( length | elems ) );</b> //Define un arreglo multidimensional con constructor<br>
+            <b>var d = [["Hola","Adios"],[1,2]];</b> //Define un arreglo multidimensional <br>
+        </p>
+        <h3>Atributos</h3>
+        <ul>
+            <li>
+                <i>length</i><br>
+                Retorna el tamaño que tiene el arreglo, si esta vacio 0, si tiene algún elemento, el número de elementos que tiene.
+            </li>
+        </ul>
+        <h3>Formas de iterar un arreglo</h3>
+        <dfn>
+            Iterar consiste en recorrer cada una de las posiciones dentro de un arreglo, la primera posición de un arreglo es la 0</dfn>
+        <ul>
+            <li>
+                <i>for</i><br>
+                Es posible iterar un arreglo usando un for, donde se defina, el contador de 0 sea menor al tamaño del arreglo 
+                <br>
+                <b>
+                    for( let i = 0; i < array.length ; i++ ){ <br>
+                        array[ i ]; <br>
+                    }
+                </b>
+            </li>
+            <li>
+                <i>for in</i><br>
+                El for in es una variación del for, que permite extraer cada una de las posiciones de un arreglo, por ejemplo, si quieres trabajar con más de una cosa con esa posición es una solución sencilla
+                <br>
+                <b>
+                    for( let index in array ){ <br>
+                        array[ index ]; <br>
+                    }
+                </b>
+            </li>
+            <li>
+                <i>for of</i><br>
+                Es posible también obtener directamente el elemento que tenemos dentro del arreglo, usando el for of, el cual no retorna la posición, sino el contenido del elemento
+                <br>
+                <b>
+                    for( let value of array ){ <br>
+                        element; <br>
+                    }
+                </b>
+            </li>
+            <li>
+                <i>while</i><br>
+                Aunque menos común es posible iterar un arreglo usando el while, de una forma similar al for clásico, aunque termina siendo más sencillo usar alguno de los anteriores
+                <br>
+                <b>
+                    let i = 0;
+                    while( i < array.lenght ){ <br>
+                        array[ i ]; <br>
+                        i++
+                    }
+                </b>
+            </li>
+            <li>
+                <i>foreach</i><br>
+                El foreach, es un método propio del objeto array, el cual itera de forma interna un arreglo y podemos indicar con una función que es lo que se tiene que realizar, esta función debe recibir 0, 1 o hasta 2 parámetros, que serán el contenido y el índice en ese orden
+                <br>
+                <b>
+                    array.foreach( ( element, index ) => { <br>
+                        element; <br>
+                        index; <br>
+                    } )
+                </b>
+            </li>
+            <li>
+                <i>map</i><br>
+                El map es un método similar a foreach, con principalmente una diferencia, el foreach esta hecho para realizar acciones dentro de la función, mientras que el map, tiende a retornar un valor después de un proceso interno
+                <br>
+                <b>
+                    array.map( ( element, index ) => { <br>
+                        return element; <br>
+                    } )
+                </b>
+            </li>
+        </ul>
+        <h3>Métodos</h3>
+        <ul>
+            <li>
+                <i>fill( value )</i><br>
+                <i>fill( value, start )</i><br>
+                <i>fill( value, start, end )</i><br>
+                Permite rellenar todo el arreglo o una porción del mismo con un valor indicado en value, puede ser un entero, string, boolean, double, objeto, array u otras cosas
+            </li>
+            <li>
+                <i>push( value )</i><br>
+                Añade un nuevo elemento al final del arreglo
+            </li>
+            <li>
+                <i>unshift( value )</i><br>
+                Añade un elemento al inicio del arreglo
+            </li>
+            <li>
+                <i>pop()</i><br>
+                Elimina el último elemento del arreglo y lo devuelve, de esta forma lo podemos recuperar
+            </li>
+            <li>
+                <i>shift()</i><br>
+                Elimina el primer elemento del arreglo y lo retorna, a modo de recuperación
+            </li>
+            <li>
+                <i>splice( start )</i><br>
+                <i>splice( start, length )</i><br>
+                Elimina un conjunto de elementos del arreglo, o lo vacia completamente, indicando donde se inicia en el primer parámetro la posición de incio y el segundo indica cuantos elementos se van a eliminar, retorna todo el conjunto de los elementos eliminados
+            </li>
+            <li>
+                <i>toString()</i><br>
+                Parsea el arreglo a una cadena de texto y lo retorna
+            </li>
+            <li>
+                <i>join( string )</i><br>
+                Parsea el arreglo a cadena de texto, sustituyendo las comas por el valor o valores que pasemos dentro del string retornandolo
+            </li>
+            <li>
+                <i>concat( array )</i><br>
+                <i>concat( values... )</i><br>
+                Permite concatenar dos arreglos, o añadir múltiples elementos nuevos al arreglo ya existente, finalmente devuelve el resultado de la concatenación
+            </li>
+            <li>
+                <i>slice()</i><br>
+                <i>slice( start )</i><br>
+                <i>slice( start, end )</i><br>
+                Retorna una copia del arreglo entre las posiciones indicadas, o una copia total del mismo, si no se indica una posición de inicio
+            </li>
+            <li>
+                <i>copyWithin( target, start )</i><br>
+                <i>copyWithin( target, start, end )</i><br>
+                Copia una parte del arreglo en otra posición distinta, donde el primer parámetro indica la posición donde se inicia la copia del arreglo, el segundo donde inicia la copia, es decir el primer elemento que se copia y el tercer parámetro el último elemento a copiar, si se indica el ultimo, se copia el sobrante del arreglo
+            </li>
+            <li>
+                <i>keys()</i><br>
+                Retorna un iterador que contiene cada una de las keys del arreglo, es decir las posiciones del mismo
+            </li>
+            <li>
+                <i>values()</i><br>
+                Retorna un iterador que contiene cada una de los values del arreglo, es decir el contenido del array
+            </li>
+            <li>
+                <i>entries()</i><br>
+                Retorna un iterador que contiene los arreglos de cada elemento, el primero indicando la posición y el segundo el valor que le corresponde el arreglo
+            </li>
+            <li>
+                <i>reverse()</i><br>
+                Coloca en reversa todos los elementos dentro del arreglo
+            </li>
+            <li>
+                <i>includes( value )</i><br>
+                <i>includes( value, from )</i><br>
+                Retorna si un arreglo contiene el elemento que se busca, a partir de una posición indicada, si no se indica, busca la primer coincidencia en el arreglo, retorna un verdadero o falso según sea el caso
+            </li>
+            <li>
+                <i>find( callback )</i><br>
+                Retorna el valor del primer elemento que cumpla con la condición indicada en el callback
+                <br>
+                <b> value => condition </b>
+            </li>
+            <li>
+                <i>findIndex( callback )</i><br>
+                Devuelve el indice del primer elemento que cumpla con la condición indicada
+                <br>
+                <b> value => condition </b>
+            </li>
+            <li>
+                <i>reduce( callback )</i><br>
+                Opera los valores dentro del arreglo, para obtener un único valor, puede indicarse un valor inicial, para la reducción
+                <br>
+                <b> value => operation </b>
+            </li>
+            <li>
+                <i>reduceRight( callback )</i><br>
+                Opera los valores dentro del arreglo, para obtener un único valor, puede indicarse un valor inicial, para la reducción, pero inicia desde la derecha
+                <br>
+                <b> value => operation </b>
+            </li>
+            <li>
+                <i>sort( callback )</i><br>
+                Ordena el arreglo, bajo el criterio indicado en el callback, este siempre se va a comparar con 0 y se ordena con respecto a este valor
+                <br>
+                <b> value => operation </b> <br>
+                por ejemplo, si queremos ordenar de menor a mayor 
+                <b> ( a, b ) => a - b </b> <br>
+                De mayor a menor
+                <b> ( a, b ) => ( (a * -1) - (b * -1) ) </b> //Donde al multiplicar por -1 invertimos el valor
+            </li>
+            <li>
+                <i>filter( callback )</i><br>
+                Retorna un arreglo con todos los elementos que cumplan el criterio indicado
+                <br>
+                <b> value => condition </b>
+            </li>
+            <li>
+                <i>some( callback )</i><br>
+                Devuleve un boolean que indica si almenos uno de los elementos cumple con la condición del callback, si ninguno lo hace devuelve falso
+                <br>
+                <b> value => condition </b>
+            </li>
+            <li>
+                <i>every( callback )</i><br>
+                Busca que todos los elementos del arreglo, cumplan con la condición especificada, si alguno falla automaticamente devuelve falso
+                <br>
+                <b> value => condition </b>
+            </li>
+        </ul>
+        <h2 id="theme-object" >Object</h2>
     </main>
-    <h2 id="theme-array" >Array</h2>
-    <h2 id="theme-object" >Object</h2>
-    <script src="./string.js" ></script>
+    <script src="./array.js" ></script>
 </body>
 </html>
