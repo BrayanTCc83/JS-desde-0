@@ -199,7 +199,6 @@
             <p id="prueba" ></p>
         </p>
         <hr>
-        -->
         <h2 id="theme-array" >Array</h2>
         <p>
             Un array es una estructura de datos que permite almacenar múltiples datos dentro de una misma variable, estos datos pueden ser accedidos mediante sus índices, es decir la posición que tiene el elemento dentro del arreglo
@@ -414,8 +413,81 @@
                 <b> value => condition </b>
             </li>
         </ul>
+    -->
         <h2 id="theme-object" >Object</h2>
+        Los objetos dentro de js permiten almacenar valores en formato de tuplas, clave-valor, son también conocidos como maps
+        donde similar a los arreglos vamos a tener una clave de acceso y un valor asignado al mismo, con la diferencia de que las claves,
+        no van a ser números, sino más bien strings.
+        <h3>Definición</h3>
+        Los objetos van a ser definidos de una forma bastante sencilla, a una variable se asigna un objeto abriendo llaves con sus 
+        propiedades y valores, no hay más, así de sencillo
+        <p>
+            var objeto = { <br>
+                propiedad : "valor" <br>
+            }
+        </p>
+        La propiedad puede estar definida o no entre comillas, luego los dos puntos indican una asignación y finalmente el valor, puede ser
+        boolean, number, string, array, object, function y cualquier otro.
+        <h3>Acceso</h3>
+        Los objetos son especiales, para acceder a sus valores, podemos hacerlo como en un array, es decir usando corchetes, generalmente cuando
+        tenemos el valor almacenado en una variable y el operador punto, cuando se requiere una propiedad específica e invariable
+        <p> <i>a.propiedad</i> //valor </p>
+        <p> <i>a["propiedad"]</i> //valor </p>
+        <p>
+            let x = "propiedad" <br>
+            a[ x ] //valor
+        </p>
+        Pero para acceder a sus métodos sucede algo curioso, pues para ello, dado a que el punto lo usamos para todas las propiedades ahí presentes
+        necesitamos usar directamente la clase Object para poder usar métodos de la clase, ahora si, sabiendo esto, veamos cuales son esos métodos
+        <h3>Métodos</h3>
+        <ul>
+            <li>
+                <b>is( obj )</b>
+                <p>Valida con un boolean si el primer valor es igual a un segundo</p>
+            </li>
+            <li>
+                <b>isExtensible( obj )</b>
+                <p>Valida si es posible añadir nuevos elementos al objeto</p>
+            </li>
+            <li>
+                <b>isFrozen( obj )</b>
+                <p>Indica si los valores de sus propiedades o la cantidad de ellas no pueden ser modificadas</p>
+            </li>
+            <li>
+                <b>isSealed( obj )</b>
+                <p>Similar a isFrozen, pero enfocado en las propiedades</p>
+            </li>
+            <li>
+                <b>length</b>
+                <p>Tamaño del objeto</p>
+            </li>
+            <li>
+                <b>preventExtensions( obj )</b>
+                <p>Previene la anexión de propiedades al objeto indicado</p>
+            </li>
+            <li>
+                <b>seal( obj )</b>
+                <p>Previene que las propiedades existentes sean modificadas</p>
+            </li>
+            <li>
+                <b>values( obj )</b>
+                <p>Retorna un arreglo con cada uno de los valores de la primera capa del objeto</p>
+            </li>
+            <li>
+                <b>keys( obj )</b>
+                <p>Retorna las llaves principales del objeto</p>
+            </li>
+            <li>
+                <b>entries( obj )</b>
+                <p>Retorna un arreglo con subarreglos que contienen la clave y el valor del objeto, un subarray por cada clave</p>
+            </li>
+            <li>
+                <b>toString( obj )</b>
+                <p>Transforma el objeto a una cadena de texto válida</p>
+            </li>
+        </ul>
+        Existen más métodos pero algunos son redundantes o defininen las características para crear el objeto como tal.
     </main>
-    <script src="./array.js" ></script>
+    <script src="./object.js" ></script>
 </body>
 </html>
