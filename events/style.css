@@ -1,0 +1,21 @@
+:root{
+    font-family: sans-serif;
+}
+div{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px rgba(125, 125, 125, 0.3);
+}
+form>input{
+    display: block;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 25;
+    padding: 10px;
+}
+.invalid{
+    background-color: rgb(255, 152, 152);
+    color: rgb(145, 0, 0);
+}

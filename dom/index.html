@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <main>
+        <form action="">
+            <h2>Formulario</h2>
+            <label for="usName">
+                <span>Nombre</span>
+                <input type="text" id="usName" name="usName" >
+            </label>
+            <label for="usAge">
+                <span>Edad</span>
+                <input type="number" id="usAge" name="usAge" >
+            </label>
+            <hr>
+            <h3>Sexo</h3>
+            <label for="sxM">
+                <input type="radio" id="sxM" name="sexo" >
+                <span>Masculino</span>
+            </label>
+            <label for="sxF">
+                <input type="radio" id="sxF" name="sexo" >
+                <span>Femenino</span>
+            </label>
+            <label for="sxN">
+                <input type="radio" id="sxN" name="sexo" >
+                <span>No definido</span>
+            </label>
+            <input type="submit">
+        </form>
+        <div id="div1" >
+            <h2>Este es el DIV 1</h2>
+            <button id="addAside" > Crear nuevo aside </button>
+        </div>
+        <div id="div2" class="newClass" >Este es el DIV 2</div>
+        <div id="div3" class="newClass" >Este es el DIV 3</div>
+        <div id="div4" >Este es el DIV 4</div>
+    </main>
+    <script src="./index.js" ></script>
+</body>
+</html>
